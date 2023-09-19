@@ -4,7 +4,7 @@ print(""" welcome to Number Guessing Game
 
 times=input("Choose a difficulty. Type Hard or Easy \n").lower()
 number=random.randint(1,100)
-print(number)
+# print(number)
 if times=="easy":
     no_of_times=10
 elif times=="hard":
@@ -13,10 +13,10 @@ else:
     print("Inavalied input")
 for i in range(no_of_times,0,-1):
     print(f"You have {i} attempts remaining to guess the number.")
-    guess=int(input("Make a guess"))
-    if number>guess:
+    guess=int(input("Make a guess \n"))
+    if number<guess:
         print("Too High")
-    elif number<guess:
+    elif number>guess:
         print("Too Low")
     else:
         print(f"You got it! The answer was {number}")
